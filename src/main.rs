@@ -7,13 +7,10 @@ mod prelude;
 mod reader;
 
 fn main() {
-    // let days = vec![DayKind::Day1(
-    //     "./src/inputs/day_1.txt",
-    //     &[part_kind::PartKind::Part1],
-    // )];
-
-    // run(days);
-    let day = DayKind::Day2("./src/inputs/day_2.txt", &[part_kind::PartKind::Part1]);
+    let day = DayKind::Day2(
+        "./src/inputs/day_2.txt",
+        &[part_kind::PartKind::Part1, part_kind::PartKind::Part2],
+    );
     run_day(day);
 }
 
