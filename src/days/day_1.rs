@@ -1,6 +1,6 @@
 use crate::part_kind::PartKind;
 
-pub fn day_1(input: &str, parts: &[PartKind]) {
+pub fn run(input: &str, parts: &[PartKind]) {
     for part in parts {
         match part {
             PartKind::Part1 => {
@@ -60,7 +60,7 @@ fn part2(input: &str) -> i32 {
 }
 #[cfg(test)]
 mod tests {
-    use crate::days::days_1::part1;
+    use crate::days::day_1::part1;
 
     #[test]
     fn part1_test() {
