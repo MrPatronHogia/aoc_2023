@@ -7,8 +7,8 @@ mod prelude;
 mod reader;
 
 fn main() {
-    let day = DayKind::Day4(
-        "./src/inputs/day_4.txt",
+    let day = DayKind::Day5(
+        "./src/inputs/day_5.txt",
         &[part_kind::PartKind::Part1, part_kind::PartKind::Part2],
     );
     run_day(day);
