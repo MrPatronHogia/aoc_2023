@@ -9,6 +9,7 @@ pub enum DayKind<'a> {
     Day3(&'a str, &'a [PartKind]),
     Day4(&'a str, &'a [PartKind]),
     Day5(&'a str, &'a [PartKind]),
+    Day6(&'a str, &'a [PartKind]),
 }
 pub trait GetDayNameTrait {
     fn get_day(&self) -> String;
@@ -29,6 +30,7 @@ impl<'a> GetDayNameTrait for DayKind<'a> {
             DayKind::Day3(_, _) => String::from("3"),
             DayKind::Day4(_, _) => String::from("4"),
             DayKind::Day5(_, _) => String::from("5"),
+            DayKind::Day6(_, _) => String::from("6"),
         }
     }
 }
@@ -40,7 +42,7 @@ impl<'a> RunDayTrait for DayKind<'a> {
             DayKind::Day2(_, parts) => crate::days::day_2::run(input, parts),
             DayKind::Day3(_, parts) => crate::days::day_3::run(input, parts),
             DayKind::Day4(_, parts) => crate::days::day_4::run(input, parts),
-            DayKind::Day5(_, parts) => crate::days::day_5::run(input, parts),
+            DayKind::Day6(_, parts) => crate::days::day_6::run(input, parts),
             _ => print!(""),
         }
     }
@@ -54,6 +56,7 @@ impl<'a> GetFileContentTrait for DayKind<'a> {
             DayKind::Day3(file_name, _) => read_file(&file_name),
             DayKind::Day4(file_name, _) => read_file(&file_name),
             DayKind::Day5(file_name, _) => read_file(&file_name),
+            DayKind::Day6(file_name, _) => read_file(&file_name),
         }
     }
 }
